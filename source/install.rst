@@ -2,16 +2,12 @@
 Installation
 ############
 
-This section contains instructions to install `napalm_dellos10 <https://github.com/napalm-automation-community/napalm-dellos10>`_.
+This information contains instructions to install `napalm_dellos10 <https://github.com/napalm-automation-community/napalm-dellos10>`_. Included is information on the setup environment for managing Dell EMC Networking OS10 switches using Python.
 
-we shall cover the setup environment for managing Dell Networking OS10 switches
+Install NAPALM
+**************
 
-Install instruction given below is for Linux Debian.
-
-Install Napalm
---------------
-
-Install Dell Networking OS10 NAPALM driver,
+Install the Dell Networking OS10 NAPALM driver:
 
 ::
 
@@ -20,9 +16,9 @@ Install Dell Networking OS10 NAPALM driver,
    sudo pip install napalm-dellos10
 
 Test your setup
----------------
+***************
 
-Open the Python interpreter terminal using "python" and type the below,
+Open the Python interpreter terminal using "python":
 
 ::
 
@@ -32,4 +28,3 @@ Open the Python interpreter terminal using "python" and type the below,
     >>> e.open()
     >>> e.get_facts()
     >>> e.close()
-

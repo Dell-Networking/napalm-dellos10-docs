@@ -91,9 +91,9 @@ qthelp:
 	@echo
 	@echo "Build finished; now you can run "qcollectiongenerator" with the" \
 	      ".qhcp project file in $(BUILDDIR)/qthelp, like this:"
-	@echo "# qcollectiongenerator $(BUILDDIR)/qthelp/DellEMCNetworkingNapalmIntegration.qhcp"
+	@echo "# qcollectiongenerator $(BUILDDIR)/qthelp/DellEMCNetworkingAnsibleIntegration.qhcp"
 	@echo "To view the help file:"
-	@echo "# assistant -collectionFile $(BUILDDIR)/qthelp/DellEMCNetworkingNapalmIntegration.qhc"
+	@echo "# assistant -collectionFile $(BUILDDIR)/qthelp/DellEMCNetworkingAnsibleIntegration.qhc"
 
 .PHONY: applehelp
 applehelp:
@@ -110,8 +110,8 @@ devhelp:
 	@echo
 	@echo "Build finished."
 	@echo "To view the help file:"
-	@echo "# mkdir -p $$HOME/.local/share/devhelp/DellEMCNetworkingNapalmIntegration"
-	@echo "# ln -s $(BUILDDIR)/devhelp $$HOME/.local/share/devhelp/DellEMCNetworkingNapalmIntegration"
+	@echo "# mkdir -p $$HOME/.local/share/devhelp/DellEMCNetworkingAnsibleIntegration"
+	@echo "# ln -s $(BUILDDIR)/devhelp $$HOME/.local/share/devhelp/DellEMCNetworkingAnsibleIntegration"
 	@echo "# devhelp"
 
 .PHONY: epub

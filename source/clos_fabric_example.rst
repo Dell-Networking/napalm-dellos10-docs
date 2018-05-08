@@ -1,33 +1,31 @@
-=========================================================================
+===================================================================
 Provision CLOS fabric using Dell EMC Networking NAPALM APIs example
-=========================================================================
+===================================================================
 
-This example describes how to use NAPALM to build a CLOS fabric with Dell EMC Networking OS10 switches.
-The sample topology is a two-tier CLOS fabric with two spines and four leafs connected as mesh. EBGP is running between the two tiers.
+This information describes how to use NAPALM to build a CLOS fabric with Dell EMC Networking OS10 switches. The sample topology is a two-tier CLOS fabric with two spines and four leafs connected as mesh. EBGP is running between the two tiers.
 
-All switches in spine have the same AS number, and each leaf switch has a unique AS number. All AS number used are private.
-For application load-balancing purposes, the same prefix is advertised from multiple leaf switches and uses *BGP multipath relax* feature.
+All switches in spine have the same AS number, and each leaf switch has a unique AS number. All AS number used are private. For application load-balancing purposes, the same prefix is advertised from multiple leaf switches and uses *BGP multipath relax* feature.
 
 
 .. figure:: ./_static/topo.png
    :scale: 50 %
    :alt: map to buried treasure
 
-STEP 1
-~~~~~~
+Step 1
+******
 
-Download the CLOS fabric configuration by clicking the switch name below,
+Download the CLOS fabric configuration:
 
 :download:`spine1 <config/spine1.cfg>` :download:`spine2 <config/spine2.cfg>` :download:`leaf1 <config/leaf1.cfg>` :download:`leaf2 <config/leaf2.cfg>` :download:`leaf3 <config/leaf3.cfg>` :download:`leaf4 <config/leaf4.cfg>`
 
-Copy all the downloaded configuration file in the any directory here named ``/root/napalm/clos_configuration``
+Copy all the downloaded configuration files in the the ``/root/napalm/clos_configuration`` directory.
 
-STEP 2
-~~~~~~
+Step 2
+******
 
-Load/Merge configuration for all the switches in the fabric
+Load/merge the configuration for all the switches in the fabric. 
 
-Create a file called ``load_merge.py`` in a folder with the following content:
+Create a file called ``load_merge.py`` in a folder:
 
 ::
 
