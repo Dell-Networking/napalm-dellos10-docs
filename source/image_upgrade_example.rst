@@ -1,15 +1,13 @@
-============================================================================
-Use NAPALM to install or upgrade devices running Dell EMC Networking OS10
-============================================================================
+========================================================================
+Install or upgrade devices running Dell EMC Networking OS10 using NAPALM
+========================================================================
 
-This example explains how to use NAPALM to install or upgrade the software image on a device running Dell EMC Networking OS10.
+This information explains how to use NAPALM to install or upgrade the software image on a device running Dell EMC Networking OS10.
 
+Step 1
+******
 
-STEP 1
-~~~~~~
-Make sure switches are accessible through NAPALM
-
-Open the Python interpreter terminal using "python" and type the below line by line,
+Make sure switches are accessible through NAPALM. Open the Python interpreter terminal using "python" match the example:
 
 ::
 
@@ -20,29 +18,26 @@ Open the Python interpreter terminal using "python" and type the below line by l
     >>> e.get_facts()
     >>> e.close()
 
-STEP 2
-~~~~~~~
+Step 2
+******
 
-Upload the image you need to install to any of the TFTP/FTP/SCP/SFTP/HTTP server
+Upload the image to install to any TFTP/FTP/SCP/SFTP/HTTP server.
 
-STEP 3
-~~~~~~~
-Install or upgrade the image on the switch as below,
+Step 3
+******
 
-Example image file path:
+Install or upgrade the image on the switch. Example image file path is /root/PKGS_OS10-Enterprise-10.4.0E.R2.30-installer-x86_64.bin.
 
 SCP server details are below,
 ``Server IP``: 1.1.1.1
 ``credentials``: username: my_username, password: my_password
 ``image file path``: /root/PKGS_OS10-Enterprise-10.4.0E.R2.30-installer-x86_64.bin
 
-then our ``image_file_url`` should look as below
+Example ``image_file_url``:
 
 ``image_file_url="scp://my_username:my_password@1.1.1.1/root/PKGS_OS10-Enterprise-10.4.0E.R2.30-installer-x86_64.bin"``
 
-To install the switch image run the below python file:
-
-Create a file called ``image_upgrade.py`` in a folder with the following content:
+To install the switch image, create a file called ``image_upgrade.py`` in a folder:
 
 ::
 
@@ -71,7 +66,6 @@ Create a file called ``image_upgrade.py`` in a folder with the following content
 
     device.close()
 
-
 .. note::
 
    ``image_file_url`` format for TFTP/FTP/SCP/SFTP/HTTP server are below
@@ -83,4 +77,3 @@ Create a file called ``image_upgrade.py`` in a folder with the following content
             - ``sftp``:   Install from remote SFTP server (sftp://userid:passwd@hostip/filepath)
             - ``tftp``:   Install from remote TFTP server (tftp://hostip/filepath)
             - ``usb``:    Install from USB directory (usb://filepath)
-
