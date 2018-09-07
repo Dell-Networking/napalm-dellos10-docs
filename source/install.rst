@@ -14,7 +14,7 @@ Install the Dell Networking OS10 NAPALM driver:
    sudo apt-get install libffi-dev libssl-dev python-dev python-cffi libxslt1-dev python-pip
    pip install --upgrade pip
    sudo pip install --upgrade cffi
-   sudo pip install https://github.com/napalm-automation-community/napalm-dellos10/archive/v1.0.5.zip 
+   sudo pip install napalm-dellos10
 
 Test your setup
 ***************
