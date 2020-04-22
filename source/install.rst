@@ -23,7 +23,7 @@ Open the Python interpreter terminal using "python":
 
 ::
 
-    >>> from napalm_base import get_network_driver
+    >>> from napalm.base import get_network_driver
     >>> d = get_network_driver('dellos10')
     >>> e = d('<HOSTNAME/IP_ADDRESS>', '<USERNAME>', '<PASSWORD>', optional_args={'global_delay_factor': 3})
     >>> e.open()
